@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- Ponte https per il login TikTok (TikTok non accetta redirect http://localhost).
+     Pubblica questo file su un indirizzo https (es. GitHub Pages) e mettilo come TIKTOK_REDIRECT_URI in .env
+     e come Redirect URI nell'app TikTok. Rimanda il codice al centro operativo locale. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Notorious RGB · TikTok</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#090A0C;color:#EEE9DF;font:16px/1.5 system-ui,sans-serif;text-align:center;padding:16px}a{color:#00FF66}</style>
+</head>
+<body>
+<div><p>Connecting TikTok to OS Notorious…</p><p><a id="go" href="#">Continue</a></p></div>
+<script>
+  var url = "http://localhost:4747/oauth/tiktok/callback" + location.search;
+  document.getElementById("go").href = url;
+  location.replace(url);
+</script>
+</body>
+</html>
